@@ -1,0 +1,46 @@
+﻿@{
+}
+
+<h2>İLETİŞİM FORMU</h2>
+<form asp-action="Index" method="post">
+    <div class="mb-3">
+        <label for="exampleInputName1" class="form-label"> <b> İsim Soyisim </b></label>
+        <input type="text" class="form-control" id="exampleInputName1" name="_name" aria-describedby="textHelp">
+        <div id="textHelp" class="form-text">Adını asla kimseyle paylaşmayacağız.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"><b>E-Posta Adresi</b></label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">E-Postanı asla kimseyle paylaşmayacağız.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"><b>Şifre</b></label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"><b>Mesaj</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="mesaj" rows="3"></textarea>
+    </div>
+    <div class="cinsiyet" style="display:flex;">
+        <div class="mb-3 form-check" style="margin-right:10px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1"><b>Erkek</b></label>
+        </div>
+        <div class="mb-3 form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2"><b>Kadın</b></label>
+        </div>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="kontrol">
+        <label class="form-check-label" for="exampleCheck1"><b>Onaylıyorum</b></label>
+    </div>
+    <button type="submit" class="btn btn-primary"><b>Gönder</b></button>
+</form>
+<hr />
+
+<h3>İsim: @ViewBag.Name</h3>
+<h3>Email: @ViewBag.Email</h3>
+<h3>Mesaj: @ViewBag.Mesaj</h3>
+<h3>Cinsiyet: @ViewBag.flexRadioDefault</h3>
+<h3>Kontrol: @ViewBag.Check</h3>

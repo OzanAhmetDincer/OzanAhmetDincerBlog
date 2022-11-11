@@ -1,0 +1,34 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Aþaðýdaki css kodlarý carousel ikonlarýnýn arka plan rengini deðiþtirir.*/
+/*.carousel-control-prev-icon {
+    background-color: red;
+}
+
+.carousel-control-next-icon {
+    background-color: red;
+}*/
+
+/*Aþaðýdaki kod caorusel ikonlarýnýn rengini deðiþtirir.*/
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert();
+}
+

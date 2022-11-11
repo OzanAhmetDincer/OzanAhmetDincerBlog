@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+<div style="display:flex; ">
+    <!--style="display:flex; deriz ki bu div içerisinde ki diğer tüm divler tek satırda toplansın. position: relative; margin:auto derizki ana divin içindeki divler sıralı bir şekilde yerleşsin. Yani şuan bizim 3 alt div imiz var biri sağ biri sol biri ortaya yerleşmiş olur.-->
+    <div class="card" style="width: 18rem; position: relative; margin:auto">
+        <img src="/assets/Html.png" class="card-img-top" alt="HTML">
+        <div class="card-body">
+            <h5 class="card-title">HTML</h5>
+            <p class="card-text">HTML Hakkında Her şey...</p>
+            <a href="../Ogrendiklerim/HtmlView" class="btn btn-primary">Tıkla Bana</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem; position: relative; margin:auto">
+        <img src="/assets/Css.png" class="card-img-top" alt="CSS">
+        <div class="card-body">
+            <h5 class="card-title">CSS</h5>
+            <p class="card-text">CSS Hakkında Her şey...</p>
+            <a href="../Ogrendiklerim/CssView" class="btn btn-primary">Tıkla Bana</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem; position: relative; margin:auto">
+        <img src="/assets/Js.png" class="card-img-top" alt="JavaScript">
+        <div class="card-body">
+            <h5 class="card-title">JavaScript</h5>
+            <p class="card-text">JavaScript Hakkında Her şey...</p>
+            <a href="../Ogrendiklerim/JavaScriptView" class="btn btn-primary">Tıkla Bana</a>
+        </div>
+    </div>
+
+</div>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width:300px; margin:auto;">
+    <div class="carousel-inner"><!--margin:auto ile carousel i ortaladık-->
+        <div class="carousel-item active">
+            <a href="../Ogrendiklerim/HtmlView"><img src="/assets/Html.png" class="d-block w-100" alt="..."></a>
+
+        </div>
+        <div class="carousel-item">
+            <a href="../Ogrendiklerim/CssView"><img src="/assets/Css.png" class="d-block w-100" alt="..."></a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="../Ogrendiklerim/JavaScriptView"><img src="/assets/Js.png" class="d-block w-100" alt="..."></a>
+
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    <!--carousel ikonlarının renklerini wwwroot ->css kısmında değiştirdik -->
+</div>
+
