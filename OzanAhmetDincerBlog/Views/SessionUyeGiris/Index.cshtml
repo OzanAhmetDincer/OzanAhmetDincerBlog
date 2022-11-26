@@ -1,0 +1,9 @@
+﻿<h2>Üye Girişi</h2>
+
+<form asp-action="SessionOlustur">
+    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı" value="admin" />
+    <input type="password" name="sifre" placeholder="Şifre" />
+    <input type="submit" value="Giriş" />
+</form>
+
+@TempData["mesaj"]

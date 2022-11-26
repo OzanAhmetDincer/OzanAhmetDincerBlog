@@ -1,7 +1,14 @@
+using FluentValidation;
+using OzanAhmetDincerBlog.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IValidator<KullaniciFluentValidation>, KullaniciFluentValidation2>(); // FluentValidation kullanarak validasyon yapacaðýmýzý uygulamaya bildiriyoruz
+
+builder.Services.AddSession(option => option.IdleTimeout = TimeSpan.FromMinutes(3)); // servis olarak session ý ekledik
 
 var app = builder.Build();
 
@@ -15,6 +22,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseSession(); // uygulamada session kullanmak istediðimizi belirttik
 
 app.UseRouting();
 

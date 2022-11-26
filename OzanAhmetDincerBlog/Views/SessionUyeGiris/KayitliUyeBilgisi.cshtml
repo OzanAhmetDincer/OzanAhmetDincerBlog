@@ -1,0 +1,14 @@
+﻿<h1>Kullanıcı Bilgileri</h1>
+
+<div>
+    Kullanıcı Adı<!--Sessiondaki değer--> : @TempData["SessionBilgi"]
+</div>
+
+<div>
+    Üye Şifresi<!--Sessiondaki user guid--> : @TempData["userGuid"]
+</div>
+
+
+<a asp-action="SessionSil">
+    Kayıt Sil<!--SessionSil-->
+</a>
